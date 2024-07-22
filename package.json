@@ -1,0 +1,33 @@
+{
+  "name": "fav-movie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
+    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
+    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
+    "migrate": "npx dotenv -e .env.local -- prisma migrate deploy",
+    "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.1",
+    "dotenv": "^16.4.5",
+    "next": "14.2.4",
+    "next-cloudinary": "^6.6.2",
+    "prisma": "^5.15.1",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
+  }
+}

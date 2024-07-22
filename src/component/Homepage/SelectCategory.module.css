@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 90dvh;
+}
+
+.box {
+  max-width: 50%;
+  top: 25%;
+}
+
+.text h1 {
+  text-align: center;
+  line-height: 12px;
+  font: bold 2.2rem var(--pri-text);
+  /* font-size: 2.2rem; */
+  margin-bottom: 0.2rem;
+}
+.text h3 {
+  color: grey;
+  line-height: 32px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: normal 1rem var(--pri-text);
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons button {
+  border-radius: 10px;
+  font: bold 1.2rem var(--sec-text);
+  font-weight: 900;
+  padding: 0.4rem;
+}
+
+.buttons button:hover,
+.buttons button:active {
+  background-color: black;
+  color: darkgray;
+}

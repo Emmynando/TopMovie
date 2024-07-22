@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: 99dvh;
+}
+
+.box h1 {
+  font-family: var(--sec-text);
+}
+
+.box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.container label {
+  color: darkgrey;
+  font: bold 1.2rem var(--pri-text);
+  margin-top: 1.5rem;
+}
+.box {
+  max-width: 60%;
+  height: 90%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.container input,
+.container textarea,
+.container select {
+  border-radius: 5px;
+  padding: 5px 3px;
+  width: 100%;
+}
+
+.container input,
+.container select {
+  height: 2rem;
+}
+
+.container input[type="number"]::-webkit-inner-spin-button,
+.container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box button {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  /* margin-left: 25%; */
+  padding: 0.25rem 0.5rem;
+  width: 40%;
+}
+
+.buttons button:hover,
+.buttons button:active {
+  background-color: black;
+  color: darkgrey;
+}
