@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FavMovie
 
-## Getting Started
+<!-- -	Website: https://www.openbao.org -->
 
-First, run the development server:
+- Developed by [Okezie, Chukwuemeka](https://linkedin.com/in/chukwuemeka-okezie-2b1335177)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**FavMovie is a webiste created with Nextjs an Cloudinary where users can share details about their favourite movie of the week,
+all in one place with just a single link.**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The key features of OpenBao are:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Movie Details**: Each FavNovie link containe every details about a single movie
+  which include Movie title, thumbnail, download link, Genre, plot and a lot of other
+  details that may be added.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Single Week Entry**: Favmovie allows only an entry for Top Movie of the week
+  per user.
 
-## Learn More
+- **No Authentication**: No hassles of signup or login to create a movie list.
 
-To learn more about Next.js, take a look at the following resources:
+To run a development version of FavMovie, populate your env files with the
+following values
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Note: This project is bootstrapped using yarn so ensure to install all dependencies using yarn
+...
+$ NEXT_PUBLIC_DATABASE_URL
+...
+$ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+...
+$ NEXT_PUBLIC_CLOUDINARY_URL
+...
+$ NEXT_PUBLIC_CLOUDINARY_API_SECRET
+...
+$ NEXT_PUBLIC_CLOUDINARY_API_KEY
+...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+t
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To run, type `yarn run dev`.

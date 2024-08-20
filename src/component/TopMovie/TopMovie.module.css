@@ -44,6 +44,11 @@
   appearance: none;
 }
 
+.thumbnail__button{
+  /* height:2rem; */
+  width:8rem !important;
+}
+
 .buttons {
   width: 100%;
   display: flex;

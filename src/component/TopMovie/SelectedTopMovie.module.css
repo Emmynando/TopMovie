@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 90dvh;
   margin: 0 auto;
 }
 
@@ -45,19 +46,23 @@
   height: 100px !important;
 }
 
+.main-image {
+  object-fit: contain;
+}
 .main-image img {
-  width: 90.5rem;
-  min-height: 25rem;
+  width: 90.5rem !important;
+  height: 30rem !important;
 }
 
 .mapped-image img {
-  min-height: 12.5rem;
+  min-height: 10.5rem;
   max-width: 200px;
 }
 
 .details {
   border-radius: 5px;
   height: 15rem;
+  width: 45rem;
   background-color: #fff;
   padding: 0.5rem 0.2rem;
 }

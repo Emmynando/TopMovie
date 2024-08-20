@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { CldUploadWidget } from "next-cloudinary";
 import SelectedTopMovie from "./SelectedTopMovie";
 import Head from "next/head";
 import styles from "./TopMovie.module.css";
@@ -69,8 +70,16 @@ export default function TopMovieComp() {
     const { id, value } = e.target;
     // Parse the duration input value to a number
     const newValue = id === "duration" ? parseInt(value, 10) : value;
-    setTopMovie({ ...topMovie, [id]: value });
+    setTopMovie((prevState) => ({ ...prevState, [id]: newValue }));
   }
+
+  const handleImageUpload = (result: any) => {
+    // Extract the URL of the uploaded image
+    const uploadedImageUrl = result.info.secure_url;
+    // setImageUrl(uploadedImageUrl);
+    setTopMovie((prevState) => ({ ...prevState, thumbnail: uploadedImageUrl }));
+    console.log(topMovie.thumbnail);
+  };
 
   function previewMovieList(e: any) {
     e.preventDefault();
@@ -84,11 +93,13 @@ export default function TopMovieComp() {
       setShowModal(true);
     }
   }
+
   async function submitMovieList(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // destructuring all movie items
     const { title, thumbnail, genre, movieLink, duration, plot } = topMovie;
     const allMovieITems = [title, thumbnail, genre, movieLink, duration, plot];
+
     if (allMovieITems && duration > 0 && genre !== "none") {
       setShowModal(false);
       try {
@@ -162,16 +173,22 @@ export default function TopMovieComp() {
             required
           />
           <label htmlFor="thumbnail">Movie Thumbnail</label>
-          <input
-            type="url"
-            id="thumbnail"
-            name="thumbnail"
-            value={topMovie.thumbnail}
-            onChange={handleTopMovieChange}
-            placeholder="thumbnail"
-            disabled={formDisabled}
-            required
-          />
+          <CldUploadWidget
+            uploadPreset="unsignedFavMov"
+            onSuccess={(result) => handleImageUpload(result)}
+          >
+            {({ open }) => {
+              return (
+                <button
+                  onClick={() => open()}
+                  className={styles["thumbnail__button"]}
+                >
+                  Upload Thumbnail
+                </button>
+              );
+            }}
+          </CldUploadWidget>
+
           <label htmlFor="genre">Genre</label>
           <select
             id="genre"
