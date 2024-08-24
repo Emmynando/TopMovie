@@ -1,8 +1,13 @@
 import Link from "next/link";
+// import backgroundImage from "../../../public/videos/main.mp4";
 import styles from "./SelectCategory.module.css";
 export default function SelectCategory() {
   return (
     <div className={styles.container}>
+      <video className={styles.backgroundVideo} autoPlay loop muted playsInline>
+        <source src="/videos/main.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className={styles.box}>
         <section className={styles.text}>
           <h1>Share Exciting Movies, Share Love🥰😍🤩</h1>
@@ -24,3 +29,5 @@ export default function SelectCategory() {
     </div>
   );
 }
+
+// cm02yopmj0000cgn4jvlcqe4v

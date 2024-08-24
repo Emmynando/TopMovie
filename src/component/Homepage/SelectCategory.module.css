@@ -5,7 +5,19 @@
   height: 90dvh;
 }
 
+.backgroundVideo {
+  position: absolute;
+  inset: 0;
+  width: 100dvw;
+  height: 100dvh;
+  object-fit: fill;
+  z-index: -1;
+}
+
 .box {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0px) saturate(90%);
+  padding: 2rem;
   max-width: 50%;
   top: 25%;
 }
@@ -18,7 +30,7 @@
   margin-bottom: 0.2rem;
 }
 .text h3 {
-  color: grey;
+  color: rgb(29, 27, 27);
   line-height: 32px;
   margin-bottom: 1rem;
   text-align: center;
